@@ -1,0 +1,87 @@
+{
+  "name": "TypeScript-React Library",
+  "version": "1.0.0",
+  "description": "Boilerplate for TypeScript React components library",
+  "homepage": "https://github.com/lromerio/TypescriptReactLibrary/#fire-typescript-react-library",
+  "author": "Lucio Romerio",
+  "license": "MIT",
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/lromerio/TypescriptReactLibrary.git"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "scripts": {
+    "start": "webpack-dev-server --hot --mode=development",
+    "build": "tsc",
+    "test": "jest",
+    "lint": "tslint --project .",
+    "coverage": "rm -rf ./coverage && jest --coverage",
+    "prebuild": "rm -rf ./lib && npm run lint && npm t",
+    "postbuild": "cp -R ./src/assets ./lib/assets && cp ./src/styles.css ./lib"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.tsx",
+      "!**/index.*"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "**/*spec.(ts|tsx)"
+    ],
+    "roots": [
+      "src/",
+      "selenium"
+    ],
+    "testEnvironment": "node",
+    "moduleNameMapper": {
+      "\\.css$": "identity-obj-proxy"
+    }
+  },
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "typestyle": "^2.0.1"
+  },
+  "devDependencies": {
+    "@types/enzyme": "^3.1.11",
+    "@types/enzyme-adapter-react-16": "^1.0.2",
+    "@types/jest": "^23.1.5",
+    "@types/react": "^16.4.6",
+    "@types/react-dom": "^16.0.6",
+    "@types/webpack-env": "^1.13.6",
+    "awesome-typescript-loader": "^5.2.0",
+    "chromedriver": "^2.41.0",
+    "css-loader": "^1.0.0",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.4",
+    "geckodriver": "^1.12.1",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^23.4.0",
+    "jsdom-global": "3.0.2",
+    "raf": "^3.4.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-hot-loader": "^4.3.3",
+    "selenium-webdriver": "^4.0.0-alpha.1",
+    "style-loader": "^0.21.0",
+    "ts-jest": "^23.1.4",
+    "tslint": "^5.11.0",
+    "typescript": "^2.9.2",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8",
+    "webpack-dev-server": "^3.1.4"
+  },
+  "files": [
+    "lib"
+  ]
+}

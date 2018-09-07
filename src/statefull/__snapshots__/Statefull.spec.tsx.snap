@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Statefull /> should render 1`] = `
+<class_1
+  content="Test"
+  id="my_id"
+>
+  <span
+    className="fjy8pip"
+    id="my_id"
+  >
+    Test
+  </span>
+</class_1>
+`;

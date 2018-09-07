@@ -1,0 +1,8 @@
+/* TypeStyle fontFace method do not support relative paths. */
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('./assets/fonts/roboto/regular/Roboto-Regular-webfont.eot?'),
+        url('./assets/fonts/roboto/regular/Roboto-Regular-webfont.woff'),
+        url('./assets/fonts/roboto/regular/Roboto-Regular-webfont.ttf'),
+        url('./assets/fonts/roboto/regular/Roboto-Regular-webfont.svg#roboto-regular');
+}

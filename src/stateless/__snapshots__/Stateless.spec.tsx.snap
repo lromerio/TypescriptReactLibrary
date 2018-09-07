@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Stateless /> should render 1`] = `
+<Stateless
+  content="Test"
+  id="my_id"
+>
+  <span
+    className="f1wexwm6"
+    id="my_id"
+  >
+    Test
+  </span>
+</Stateless>
+`;
